@@ -1,0 +1,184 @@
+{
+    "intents" : [
+        {
+            "tag" : "greeting",
+            "patterns": ["mulai"],
+            "responses": ["Halo! Silahkan ketik 'menu' untuk melihat kategori pertanyaan yang bisa kamu ajukan"]
+        },
+        {
+            "tag" : "menu",
+            "patterns": ["menu"],
+            "responses": ["Silahkan pilih kategori pertanyaan yang ingin kamu ajukan"]
+        },
+        {
+            "tag" : "antrian",
+            "patterns": ["pendaftaran antrian"],
+            "responses": ["Berikut beberapa pilihan pertanyaan yang telah saya rangkum untuk kamu, pilih untuk mengajukan pertanyaan"]
+        },
+        {
+            "tag": "antrian1",
+            "patterns": ["Bagaimana cara mendaftar antrian melalui website ini?"],
+            "responses": ["Cara mendaftar antrian secara online melalui website ini sangat mudah. Kamu hanya perlu mengikuti langkah-langkah sebagai berikut:\n1. Silahkan buka website E-Medika\n2. Pastikan sebelumnya kamu telah login atau mendaftarkan akunmu ya!\n3. Pada menu navigasi paling atas halaman website silahkan klik layanan\n4. Lalu kamu akan masuk ke halaman layanan dari website kami yang berisikan informasi terkait layanan kami, nomor antrian, dan nomor antrian yang sedang berjalan\n5. Untuk melakukan pendaftaran silahkan pilih layanan poli yang tersedia\n6. Selanjutnya kamu akan diarahkan untuk mengisi data-data yang diperlukan\n7. Tekan tombol kirim untuk mengirimkan data kamu\n8. Nomor antrian kamu akan terlihat di halaman layanan pada bagian nomor antrian kamu\n9. Silahkan tunggu untuk dipanggil\n10. Selesai"]
+        },
+        {
+            "tag": "antrian2",
+            "patterns": ["Apa saja persyaratan untuk mendaftar antrian?"],
+            "responses": ["Syarat untuk melakukan pendaftaran adalah kamu hanya perlu mengisi data-data sebagai berikut pada halaman layanan\n1. Alamat\n2. Pilihan Dokter\n3. Tinggi Badan\n4. Berat Badan\n5. Keluhan\n6. Alergi Obat\n7. Riwayat Penyakit"]
+        },
+        {
+            "tag" : "antrian3",
+            "patterns": ["Apakah saya bisa mendaftar antrian secara online?"],
+            "responses": ["Iya tentunya bisa, kamu bisa mendaftar antrian secara online melalui platform website E-Medika pada halaman layanan"]
+        },
+        {
+            "tag" : "antrian4",
+            "patterns": ["Bagaimana cara membatalkan pendaftaran antrian?"],
+            "responses": ["Untuk membatalkan pendaftaran antrian, kamu dapat meninggalkan antrian ini selama 24 jam tanpa memerlukan konfirmasi lanjutan"]
+        },
+        {
+            "tag" : "antrian5",
+            "patterns": ["Apakah saya bisa memilih dokter saat mendaftar antrian?"],
+            "responses": ["Pada halaman layanan web ketika melakukan pendaftaran, kamu dapat memilih opsi dokter sesuai dengan jam dan hari dokter tersebut bertugas"]
+        },
+        {
+            "tag" : "antrian6",
+            "patterns": ["Berapa biaya pendaftaran antrian secara online?"],
+            "responses": ["Pendaftaran antrian secara online tidak dikenakan biaya alias gratis. Itulah kemudahan dan efisiensi dalam menggunakan platform kami"]
+        },
+        {
+            "tag" : "antrian7",
+            "patterns": ["Bisakah saya mendaftar antrian untuk anggota keluarga saya?"],
+            "responses": ["Kamu tidak dapat melakukan pendaftaran menggunakan akun orang lain dikarenakan perbedaan data. Kamu harus melakukan pendaftaran antrian dengan data pasien"]
+        },
+        {
+            "tag" : "antrian8",
+            "patterns": ["Bagaimana cara melihat nomor antrian saya?"],
+            "responses": ["Nomor antrian kamu akan ditampilkan setelah berhasil melakukan pendaftaran secara online. Kamu dapat melihatnya di platform website E-Medika pada bagian layanan, ketika telah melakukan pendaftaran akan muncul nama dan nomor antrian"]
+        },
+        {
+            "tag" : "antrian9",
+            "patterns": ["Apakah saya perlu datang lebih awal setelah mendaftar antrian online?"],
+            "responses": ["Kamu hanya perlu datang tepat waktu sesuai dengan giliran nomor antrianmu. Namun, kamu tidak perlu datang lebih awal setelah mendaftar antrian online karena nomor antrian sudah ditetapkan"]
+        },
+        {
+            "tag" : "antrian10",
+            "patterns": ["Apa yang harus saya lakukan jika saya terlambat datang pada jadwal antrian?"],
+            "responses": ["Jika kamu terlambat datang pada jadwal antrian yang telah kamu daftarkan, sebaiknya kamu segera menghubungi pihak terkait yang berada di lokasi terkait nomor antrian kamu. Dengan batas keterlambatan dalam jangka waktu kurang dari 12 jam"]
+        },
+        {
+            "tag" : "akun",
+            "patterns": ["pendaftaran akun"],
+            "responses": ["Berikut beberapa pilihan pertanyaan yang telah saya rangkum untuk kamu, pilih untuk mengajukan pertanyaan"]
+        },
+        {
+            "tag" : "akun1",
+            "patterns": ["Bagaimana cara mendaftar akun baru di website E-Medika?"],
+            "responses": ["Cara mendaftar akun baru di website E-Medika adalah dengan mengakses situs web resmi E-Medika dan mencari opsi Daftar pada bagian navigasi pojok kanan atas. Kemudian, ikuti langkah-langkah yang diberikan dengan mengisi informasi yang diperlukan untuk membuat akun baru"]
+        },
+        {
+            "tag" : "akun2",
+            "patterns": ["Apa saja persyaratan untuk mendaftar akun di E-Medika?"],
+            "responses": ["Persyaratan umum untuk mendaftar akun di E-Medika biasanya meliputi informasi pribadi, seperti NIK, nama, email, dan kata sandi. Lalu kamu akan diarahkan untuk melengkapi data pada bagian profil dengan menambahkan data, seperti tempat tanggal lahir, alamat, nomor telepon, dan lain-lain"]
+        },
+        {
+            "tag" : "akun3",
+            "patterns": ["Apakah saya perlu email untuk mendaftar akun?"],
+            "responses": ["Ya, kamu memerlukan alamat email yang valid untuk mendaftar akun di E-Medika"]
+        },
+        {
+            "tag" : "akun4",
+            "patterns": ["Bisakah saya menggunakan nomor telepon untuk mendaftar akun?"],
+            "responses": ["Kamu dapat mendaftar akun dengan alternatif lain seperti Google atau Facebook. Namun, menggunakan alternatif nomor telepon untuk saat ini belum tersedia"]
+        },
+        {
+            "tag" : "akun5",
+            "patterns": ["Bagaimana cara mengatur kata sandi saat pendaftaran akun?"],
+            "responses": ["Saat mendaftar akun, kamu biasanya akan diminta untuk membuat kata sandi yang kuat. Pastikan untuk menggunakan kombinasi huruf, angka, dan karakter khusus untuk keamanan yang lebih baik"]
+        },
+        {
+            "tag" : "akun6",
+            "patterns": ["Apakah saya bisa menggunakan akun media sosial untuk mendaftar?"],
+            "responses": ["Untuk saat ini kami hanya menyediakan opsi untuk mendaftar menggunakan akun media sosial seperti Facebook atau Google, namun tidak dengan media sosial yang lain"]
+        },
+        {
+            "tag" : "akun7",
+            "patterns": ["Bagaimana cara mengisi formulir pendaftaran akun?"],
+            "responses": ["Untuk mengisi formulir pendaftaran akun, kamu perlu memasukkan informasi pribadi yang diminta seperti nama, alamat, nomor telepon, dan sebagainya. Kamu dapat melakukan daftar ataupun masuk bagi kamu yang telah memiliki akun sebelumnya, lalu masuk ke bagian edit profile untuk melakukan edit dan tambah data yang kosong"]
+        },
+        {
+            "tag" : "akun8",
+            "patterns": ["Apa yang harus dilakukan jika saya lupa informasi akun setelah mendaftar?"],
+            "responses": ["Jika kamu lupa informasi akun setelah mendaftar, biasanya terdapat opsi Lupa Kata Sandi atau Bantuan Login yang dapat kamu gunakan untuk mereset kata sandi atau mendapatkan bantuan"]
+        },
+        {
+            "tag" : "akun9",
+            "patterns": ["Apakah saya bisa mendaftar lebih dari satu akun?"],
+            "responses": ["Pada platform kami, satu orang hanya diperbolehkan memiliki satu akun di E-Medika"]
+        },
+        {
+            "tag" : "akun10",
+            "patterns": ["Bagaimana cara mengubah informasi pendaftaran setelah akun dibuat?"],
+            "responses": ["Untuk mengubah informasi pendaftaran setelah akun dibuat, kamu dapat masuk ke akun kamu dan mencari opsi Pengaturan Profil atau Edit Profil untuk memperbarui informasi yang diperlukan"]
+        },
+        {
+            "tag" : "umum",
+            "patterns": ["pertanyaan umum"],
+            "responses": ["Berikut beberapa pilihan pertanyaan yang telah saya rangkum untuk kamu, pilih untuk mengajukan pertanyaan"]
+        },
+        {
+            "tag" : "umum1",
+            "patterns": ["Apa itu sistem informasi E-Medika?"],
+            "responses": ["Sistem informasi E-Medika adalah sebuah sistem yang digunakan untuk manajemen informasi kesehatan pasien, memudahkan pengguna dalam melakukan pendaftaran secara online melalui platform, pencatatan riwayat medis pasien E-Medika, serta sistem komunikasi antara dokter, pasien dan juga apoteker yang menerima resep dari dokter"]
+        },
+        {
+            "tag" : "umum2",
+            "patterns": ["Bagaimana cara mengakses sistem informasi E-Medika?"],
+            "responses": ["Cara mengakses sistem informasi E-Medika melalui situs web resmi atau aplikasi yang disediakan oleh penyedia layanan. Kamu dapat melakukan daftar atau masuk menggunakan akun yang telah kamu daftarkan sebelumnya"]
+        },
+        {
+            "tag" : "umum3",
+            "patterns": ["Siapa yang bisa menggunakan sistem informasi E-Medika?"],
+            "responses": ["Siapapun yang membutuhkan layanan kesehatan dan telah mendaftar sebagai pengguna dapat menggunakan sistem informasi E-Medika ini, termasuk pasien dan staf medis"]
+        },
+        {
+            "tag" : "umum4",
+            "patterns": ["Bagaimana cara mendapatkan bantuan jika mengalami masalah dengan sistem?"],
+            "responses": ["Jika kamu mengalami masalah dengan sistem, kamu dapat mencari opsi ChatBot untuk membantu permasalahanmu dalam menggunakan sistem ini, opsi kedua kamu dapat mengirimkan feedback permasalahan dari sistem kami, dan opsi terakhir kamu dapat menghubungi petugas terkait di tempat praktik swasta E-Medika"]
+        },
+        {
+            "tag" : "umum5",
+            "patterns": ["Apakah data pasien aman di dalam sistem ini?"],
+            "responses": ["Tenang saja, dan percayakan pada kami. Data pasien diamankan dan dilindungi dengan berbagai tindakan keamanan seperti enkripsi data, akses terbatas, dan audit trail untuk melindungi informasi kesehatan pasien"]
+        },
+        {
+            "tag" : "umum6",
+            "patterns": ["Apa yang harus saya lakukan jika lupa password?"],
+            "responses": ["Jika kamu lupa password, kamu dapat menggunakan opsi Lupa Password yang biasanya tersedia saat kamu mencoba masuk. Dengan cara ini, kamu dapat mereset password kamu melalui email atau media sosial yang terdaftar"]
+        },
+        {
+            "tag" : "umum7",
+            "patterns": ["Apakah ada tutorial penggunaan sistem informasi E-Medika?"],
+            "responses": ["Penyedia layanan E-Medika menyediakan tutorial penggunaan sistem informasi mereka, baik dalam bentuk artikel, video, atau panduan penggunaan yang dapat diakses oleh pengguna. Adapun panduan dapat diakses melalui link youtube berikut: www.panduan.com"]
+        },
+        {
+            "tag" : "umum8",
+            "patterns": ["Bagaimana cara menghubungi pegawai yang menangani masalah teknis?"],
+            "responses": ["Kamu bisa menanyakan beberapa masalah teknis kepada saya terkait dengan pendaftaran antrian, pendaftaran akun, maupun pertanyaan umum terkait sistem, namun apabila terdapat kesalahan ataupun ketidaknyaman pada sistem silahkan mengirimkan feedback pada website di halaman feedback atau untuk permasalahan darurat kamu dapat langsung datang ke tempat praktek swasta E-Medika yang bertempat di www.googlemaps.com"]
+        },
+        {
+            "tag" : "umum9",
+            "patterns": ["Apakah sistem ini bisa diakses melalui perangkat mobile?"],
+            "responses": ["Iya tentunya, sistem informasi E-Medika dapat diakses melalui perangkat mobile seperti smartphone atau tablet hanya dengan membuka platform website E-Medika pada browser kamu"]
+        },
+        {
+            "tag" : "umum10",
+            "patterns": ["Bagaimana cara mendaftar sebagai pengguna baru di sistem ini?"],
+            "responses": ["Untuk mendaftar sebagai pengguna baru di sistem E-Medika, kamu perlu mengakses situs web resmi E-Medika, lalu cari opsi Daftar. Kemudian, ikuti langkah-langkah pendaftaran yang diberikan dan lengkapi informasi yang diminta untuk membuat akun baru"]
+        },
+        {
+            "tag": "nonanswer",
+            "patterns": [""],
+            "responses": ["Maaf, saya tidak mengerti apa yang kamu tanyakan. Silahkan pilih daftar pertanyaan yang sudah dirangkum. Kamu bisa mengetikkan menu untuk melihat daftar kategori pertanyaan"]
+        }
+    ]
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    :root {
+      --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      --left-msg-bg: #ffffff;
+      --right-msg-bg: #579ffb;
+      --special-msg-bg: #ffffff;
+      --header-footer-color: #6194FA;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: var(--body-bg);
+      font-family: Helvetica, sans-serif;
+    }
+
+    .msger {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      margin: 25px 10px;
+      height: calc(100% - 50px);
+      background: none;
+    }
+
+    .msger-header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background: none;
+      color: var(--header-footer-color);
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .msger-header-title {
+      text-align: left;
+    }
+
+    .msger-chat {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+      background: var(--msger-bg);
+    }
+
+    .msger-chat::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .msger-chat::-webkit-scrollbar-track {
+      background: #fff;
+    }
+
+    .msger-chat::-webkit-scrollbar-thumb {
+      background: #81A9FB;
+    }
+
+    .msg {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 10px;
+    }
+
+    .msg-text {
+      white-space: pre-line;
+    }
+
+    .msg-bubble {
+      max-width: 650px;
+      padding: 15px;
+      border-radius: 15px;
+      background: var(--left-msg-bg);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .msg-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .msg-info-name {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .msg-info-time {
+      font-size: 0.85em;
+    }
+
+    .left-msg .msg-bubble {
+      border-bottom-left-radius: 0;
+    }
+
+    .right-msg {
+      flex-direction: row-reverse;
+    }
+
+    .right-msg .msg-bubble {
+      background: var(--right-msg-bg);
+      color: #fff;
+      border-bottom-right-radius: 0;
+    }
+
+    .right-msg .msg-img {
+      margin: 0 0 0 10px;
+    }
+
+    .msger-inputarea {
+      display: flex;
+      padding: 10px;
+      background: none;
+    }
+
+    .msger-inputarea * {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      padding: 15px;
+    }
+
+    .msger-input {
+      flex: 1;
+      background: #fff;
+      border-radius: 10px;
+      width: 40px;
+      height: 50px;
+      outline: none;
+    }
+
+    .msger-send-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      background: var(--header-footer-color);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.23s;
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .msger-send-btn:hover {
+      background: #507cc0;
+    }
+
+    .msger-send-btn::before {
+      content: "➤";
+      font-size: 1.2em;
+      justify-content: center;
+    }
+
+    .special-msg .msg-bubble {
+      background: var(--special-msg-bg);
+      color: #000;
+    }
+
+    .clickable-message {
+      cursor: pointer;
+      padding: 5px;
+      margin: 5px 0;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .clickable-message:hover {
+      background: #e0e0e0;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i> Halo,<br>Ada yang bisa saya bantu? </i>
+      </div>
+    </header>
+
+    <main class="msger-chat">
+      <div class="msg left-msg">
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">Chatbot</div>
+            <div class="msg-info-time">00:00</div>
+          </div>
+
+          <div class="msg-text">
+            Chatbot AI ini dikembangkan untuk mengoptimalkan komunikasi dan menyederhanakan proses kerja, yang pada akhirnya mengarah pada operasi yang lebih lancar <br> <br> Selamat datang! Saya siap membantu Anda. Ketik 'mulai' untuk memulai obrolan
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" id="textInput" placeholder="Ketik disini">
+      <button type="submit" class="msger-send-btn"></button>
+    </form>
+  </section>
+
+  <script>
+    const msgerForm = document.querySelector(".msger-inputarea");
+    const msgerInput = document.querySelector(".msger-input");
+    const msgerChat = document.querySelector(".msger-chat");
+
+    const BOT_NAME = "ChatBot";
+    const PERSON_NAME = "You";
+
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+
+      appendMessage(PERSON_NAME, "right", msgText);
+      msgerInput.value = "";
+      botResponse(msgText);
+    });
+
+    function appendMessage(name, side, text, special = false, clickableMessages = []) {
+      let msgHTML = `
+        <div class="msg ${side}-msg ${special ? 'special-msg' : ''}">
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">${name}</div>
+              <div class="msg-info-time">${formatDate(new Date())}</div>
+            </div>
+            <div class="msg-text">`;
+
+      if (clickableMessages.length > 0) {
+        clickableMessages.forEach(message => {
+          msgHTML += `<div class="clickable-message" onclick="copyToInput('${message}')">${message}</div>`;
+        });
+      } else {
+        msgHTML += text;
+      }
+
+      msgHTML += `</div>
+          </div>
+        </div>`;
+
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+      $.get("/get", { msg: rawText }).done(function (data) {
+        const msgText = data;
+        appendMessage(BOT_NAME, "left", msgText);
+
+        if (rawText.toLowerCase() === "menu") {
+          const clickableMessages = ["pendaftaran antrian", "pendaftaran akun", "pertanyaan umum"];
+          appendMessage(BOT_NAME, "left", "", true, clickableMessages);
+        } else if (rawText.toLowerCase() === "pendaftaran antrian") {
+          const clickableMessages = ["Bagaimana cara mendaftar antrian melalui website ini?", "Apa saja persyaratan untuk mendaftar antrian?", "Apakah saya bisa mendaftar antrian secara online?", "Bagaimana cara membatalkan pendaftaran antrian?", "Apakah saya bisa memilih dokter saat mendaftar antrian?", "Berapa biaya pendaftaran antrian secara online?", "Bisakah saya mendaftar antrian untuk anggota keluarga saya?", "Bagaimana cara melihat nomor antrian saya?", "Apakah saya perlu datang lebih awal setelah mendaftar antrian online?", "Apa yang harus saya lakukan jika saya terlambat datang pada jadwal antrian?"];
+          appendMessage(BOT_NAME, "left", "", true, clickableMessages);
+        } else if (rawText.toLowerCase() === "pendaftaran akun") {
+          const clickableMessages = ["Bagaimana cara mendaftar akun baru di website E-Medika?", "Apa saja persyaratan untuk mendaftar akun di E-Medika?", "Apakah saya perlu email untuk mendaftar akun?", "Bisakah saya menggunakan nomor telepon untuk mendaftar akun?", "Bagaimana cara mengatur kata sandi saat pendaftaran akun?", "Apakah saya bisa menggunakan akun media sosial untuk mendaftar?", "Bagaimana cara mengisi formulir pendaftaran akun?", "Apa yang harus dilakukan jika saya lupa informasi akun setelah mendaftar?", "Apakah saya bisa mendaftar lebih dari satu akun?", "Bagaimana cara mengubah informasi pendaftaran setelah akun dibuat?"];
+          appendMessage(BOT_NAME, "left", "", true, clickableMessages);
+        } else if (rawText.toLowerCase() === "pertanyaan umum") {
+          const clickableMessages = ["Apa itu sistem informasi E-Medika?", "Bagaimana cara mengakses sistem informasi E-Medika?", "Siapa yang bisa menggunakan sistem informasi E-Medika?", "Bagaimana cara mendapatkan bantuan jika mengalami masalah dengan sistem?", "Apakah data pasien aman di dalam sistem ini?", "Apa yang harus saya lakukan jika lupa password?", "Apakah ada tutorial penggunaan sistem informasi E-Medika?", "Bagaimana cara menghubungi pegawai yang menangani masalah teknis?", "Apakah sistem ini bisa diakses melalui perangkat mobile?", "Bagaimana cara mendaftar sebagai pengguna baru di sistem ini?"];
+          appendMessage(BOT_NAME, "left", "", true, clickableMessages);
+        }
+      });
+    }
+    
+    function copyToInput(message) {
+      msgerInput.value = message;
+      msgerInput.focus();
+    }
+
+    function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+  </script>
+</body>
+
+</html>
